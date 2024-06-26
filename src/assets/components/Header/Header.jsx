@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Link from './../Link/Link';
+import NavItem from '../NavItem/NavItem';
 import { HiOutlineMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
+import './Header.css';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -9,7 +10,8 @@ const Header = () => {
     { id: 1, path: "/", name: "Home" },
     { id: 2, path: "/about", name: "About" },
     { id: 4, path: "/contact", name: "Contact" },
-    { id: 5, path: "/users", name: "Users" }
+    { id: 5, path: "/users", name: "Users" },
+    { id: 6, path: "/xyz123", name: "Error Page" },
   ];
   return (
     <header>
@@ -23,7 +25,7 @@ const Header = () => {
 
         <ul className={`md:flex justify-center absolute md:static bg-[#4D6BF2] duration-1000 ${open ? 'left-0' : '-left-40'}`}>
           {
-            routes.map(route => <Link key={route.id} route={route}></Link>)
+            routes.map(route => <NavItem key={route.id} route={route}></NavItem>)
           }
         </ul>
       </nav>

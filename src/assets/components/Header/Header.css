@@ -1,0 +1,6 @@
+nav li a.active {
+  border:2px solid #ffffff;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 9999px;
+}
